@@ -271,12 +271,12 @@ set(CPACK_RPM_PACKAGE_VERSION ${PKG_VERSION_STR})
 # Generate package config file
 configure_file(
     ${CMAKE_CURRENT_SOURCE_DIR}/e_smi.pc.in
-    ${CMAKE_CURRENT_BINARY_DIR}/${E_SMI_PACKAGE}.pc
+    ${CMAKE_CURRENT_BINARY_DIR}/lib${E_SMI_TARGET}.pc
     @ONLY
 )
 
 # Install package config file
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${E_SMI_PACKAGE}.pc
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib${E_SMI_TARGET}.pc
 	DESTINATION ${E_SMI}/lib/pkgconfig)
 
 include (CPack)
